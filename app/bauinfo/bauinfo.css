@@ -1,0 +1,223 @@
+:root {
+    --DarkViolet: #4A0959;
+    --gardiantDarkViolet: linear-gradient(90deg, #4A0959 0%, #9D55AE 100%);
+    --light-lavender: #e9e2eb;
+    --bs-gutter-x: .10rem;
+    --font-18: 18px;
+    --font-white: #fff;
+}
+
+.secondheader {
+    background-color: var(--light-lavender);
+}
+
+main {
+    padding-top: 140px;
+}
+
+.halfcircle-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 330px;
+    background-color: var(--light-lavender);
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    z-index: -1;
+    /* behind all headers and content */
+}
+
+.card-img {
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+}
+
+
+/* Button Styles */
+
+.bauinfo {
+    background: var(--gardiantDarkViolet);
+    color: white;
+    border: 1px solid;
+    padding: 3px;
+
+
+}
+
+.registerbutton {
+    background: var(--gardiantDarkViolet);
+    color: white;
+    border: 1px solid;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+.registerbutton:hover {
+    background: #e9e2eb;
+    color: var(--DarkViolet);
+    border-color: var(--DarkViolet);
+}
+
+.seekbutton,
+.learnmorebutton {
+    background: var(--gardiantDarkViolet);
+    color: white;
+    border: 1px solid;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+.seekbutton:hover,
+.learnmorebutton:hover {
+    background: white;
+    color: var(--DarkViolet);
+    border-color: var(--DarkViolet);
+}
+
+.Immediatetext {
+    color: var(--DarkViolet);
+}
+
+.imagesection,
+.professionals-section {
+    background-color: var(--light-lavender);
+}
+
+.usebaubutton,
+.subscribebutton {
+    background-color: white;
+    color: var(--DarkViolet);
+    border: 1px solid;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem
+}
+
+.usebaubutton:hover,
+.subscribebutton:hover {
+    background: var(--gardiantDarkViolet);
+    color: white;
+    border-color: white;
+
+}
+
+.right-part-photo-section {
+    background: linear-gradient(90deg, #511f5c 0%, #a568b3 100%);
+}
+
+
+.my-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 576px) {
+    .my-container {
+        max-width: 700px;
+    }
+}
+
+@media (min-width: 768px) {
+    .my-container {
+        max-width: 900px;
+    }
+}
+
+@media (min-width: 992px) {
+    .my-container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .my-container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .my-container {
+        max-width: 1350px;
+    }
+}
+
+/*Main nav padding*/
+@media (max-width: 1400px) {
+    .header-1 {
+        align-items: center; 
+        padding: 15px 10px !important;
+    }
+}
+@media (max-width: 1500px) {
+    .header-1 {
+        align-items: center;
+        padding: 14px 10px !important;
+    }
+}
+@media (max-width: 1600px) {
+    .header-1 {
+        align-items: center;
+        padding: 15px 10px !important;
+    }
+}
+@media (max-width: 1700px) {
+    .header-1 {
+        align-items: center;
+        padding: 15px 10px !important;
+    }
+}
+@media (max-width: 1800px) {
+    .header-1 {
+        align-items: center;
+        padding: 15px 10px !important;
+    }
+}
+
+/*main and sec nav text size*/
+
+.active .nav-link, .nav-link, .nav-link-2 {
+    font-size: var(--font-18);
+    line-height: normal;
+}
+.active .nav-link {
+    color: var(--font-white);
+}
+@media (max-width: 1500px) {
+    .nav-link, .nav-link-2 {
+        font-size: 12px !important;
+    }
+}
+@media (max-width: 1600px) {
+    .nav-link, .nav-link-2 {
+        font-size: 14px !important;
+    }
+}
+@media (max-width: 1700px) {
+    .nav-link, .nav-link-2 {
+        font-size: 16px !important;
+    }
+}
+@media (max-width: 1800px) {
+    .nav-link, .nav-link-2 {
+        font-size: 18px !important;
+    }
+}
+.nav-link, .nav-link-2 {
+    font-style: normal;
+}
+
+/* Feature Cards Section */
+.card-img {
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+}
+.card-section {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
