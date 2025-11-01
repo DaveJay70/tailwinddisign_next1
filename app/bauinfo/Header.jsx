@@ -96,7 +96,7 @@ export default function Header() {
 
         {/* Second Header */}
         <div className="secondheader relative w-full z-1 hidden md:block ">
-          <div className="my-container flex flex-wrap items-center justify-between gap-6 py-3">
+          <div className="my-container flex flex-wrap items-center justify-between gap-5 py-3">
             <Link href="/bauinfo/de" className="flex-shrink-0">
               <Image
                 src="https://bau24dev.de/info/_next/image/?url=%2Finfo%2F_next%2Fstatic%2Fmedia%2Fbau-info.3b819feb.png&w=256&q=75"
@@ -111,7 +111,7 @@ export default function Header() {
                 <Link
                   key={item}
                   href="#"
-                  className="px-4 py-6 text-[rgb(3,9,20)]  transition-colors text-[12px] sm:text-[6px] md:text-[6px] lg:text-[8px] xl:text-[12px] 2xl:text-[14px] leading-normal"
+                  className="px-3 py-6  text-[rgb(3,9,20)]  transition-colors text-[12px] sm:text-[6px] md:text-[6px] lg:text-[8px] xl:text-[12px] 2xl:text-[14px] leading-normal"
                 >
                   {item}
                 </Link>
@@ -120,7 +120,7 @@ export default function Header() {
 
             <Link
               href="#"
-              className="registerbutton inline-flex items-center justify-center rounded-full px-5 py-2 font-medium text-sm h-[42px] hover:opacity-90 transition"
+              className="registerbutton inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 font-medium  h-[42px] hover:opacity-90 transition"
             >
               Registration
             </Link>

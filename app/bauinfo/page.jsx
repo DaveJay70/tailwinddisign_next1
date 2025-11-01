@@ -45,7 +45,7 @@ export default function BauInfo() {
       src: "https://bau24dev.de/info/_next/static/media/aco.d400bbbb.png",
       alt: "ACO",
       width: 200,
-      height: 50,
+      height: 153,
     },
     {
       href: "https://bau24dev.de/info/de/company/artemide-7/",
@@ -82,7 +82,7 @@ export default function BauInfo() {
       href: "https://bau24dev.de/info/de/company/alape-3/",
       src: "https://bau24dev.de/info/_next/static/media/alape.f0a2e05c.png",
       alt: "Alape",
-      width: 205,
+      width: 200,
       height: 105,
     },
     {
@@ -111,7 +111,7 @@ export default function BauInfo() {
   return (
     <>
       <div className="w-full h-screen overflow-hidden absolute ">
-        <div className="halfcircle-bg hidden sm:block"></div>
+        <div className="halfcircle-bg hidden md:block"></div>
       </div>
 
       {/* Main Content */}
@@ -127,8 +127,8 @@ export default function BauInfo() {
 
           {/* Search Bar */}
           <div className="flex items-center justify-center px-4 pt-5">
-            <div className="flex max-w-4xl bg-white border border-gray-200 rounded-full overflow-hidden  shadow-md">
-              <div className="flex items-center gap-2 px-4 py-3 max-w-7xl w-[450px]">
+            <div className="flex flex-col sm:flex-row max-w-3xl bg-white border border-gray-200 sm:rounded-full rounded-sm overflow-hidden w-full">
+              <div className="flex items-center gap-2 px-4 py-3 w-full sm:w-[450px]">
                 <img
                   src="/svg/search.svg"
                   alt="Search Icon"
@@ -141,12 +141,12 @@ export default function BauInfo() {
                   className="w-full sm:text-xl text-sm  placeholder-gray-400 outline-none"
                 />
               </div>
-              <div className="h-6 border-l border-gray-300 my-auto"></div>
-              <div className="flex items-center gap-2 px-4 py-3 w-[300px]">
+              <div className="hidden sm:block h-6 border-l border-gray-300 my-auto"></div>
+              <div className="flex items-center justify-between gap-2 px-4 py-3 w-full sm:w-[300px] border-t border-b sm:border-none border-gray-200">
                 <input
                   type="text"
                   placeholder="Location"
-                  className="w-full sm:text-xl text-sm placeholder-gray-400 outline-none"
+                  className="w-full sm:text-xl text-base placeholder-gray-400 outline-none"
                 />
                 <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
                   <path
@@ -155,7 +155,7 @@ export default function BauInfo() {
                   />
                 </svg>
               </div>
-              <button className="seekbutton font-medium text-base m-1 transition w-auto rounded-full">
+              <button className="seekbutton  font-medium text-base m-1 transition w-auto rounded-full">
                 Search
               </button>
             </div>
@@ -171,13 +171,10 @@ export default function BauInfo() {
                  hover:shadow-lg transition-transform transform hover:-translate-y-1
                  py-6 px-4 gap-3"
               >
-                <div className="flex justify-center  mb-3">
-                  <Image
+                <div className="flex justify-center card-img">
+                  <img
                     src={card.img}
                     alt={card.title}
-                    width={88}
-                    height={87}
-                    className="card-img"
                   />
                 </div>
 
@@ -185,7 +182,7 @@ export default function BauInfo() {
                   {card.title}
                 </h3>
 
-                <p className="text-[20px] leading-[28px] text-[rgb(64,57,57)]">
+                <p className="ml-1 text-[20px] leading-[28px] text-[rgb(64,57,57)] text-center">
                   {card.desc}
                 </p>
               </div>
@@ -225,9 +222,7 @@ export default function BauInfo() {
 
                   <div className="px-6 mt-4 ">
                     <div>
-                      <h3
-                        className="text-xl font-semibold text-[rgb(3,9,20)] mb-1"
-                      >
+                      <h3 className="text-xl font-semibold text-[rgb(3,9,20)] mb-2">
                         {cat.title}
                       </h3>
                       <p className="text-[rgb(64,57,57)] text-base font-medium mb-5">
@@ -235,9 +230,11 @@ export default function BauInfo() {
                       </p>
                     </div>
 
-                    <button className="learnmorebutton text-white text-base font-medium rounded-full mt-auto">
-                      Learn more
-                    </button>
+                    <div className="items-end  justify-end">
+                      <button className="learnmorebutton text-white text-base font-medium rounded-full mt-auto">
+                        Learn more
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -246,21 +243,23 @@ export default function BauInfo() {
         </div>
 
         {/*two card section right and left  3rd section*/}
-        <div className="py-12">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 md:grid-cols-1 gap-7 px-6">
-            <div className="relative overflow-hidden transition-all duration-700 ease-out transform hover:-translate-y-1 rounded-lg">
-              <Image
-                src="https://bau24dev.de/info/_next/image/?url=%2Finfo%2F_next%2Fstatic%2Fmedia/cardbg-img.3e1a6dec.png&w=1920&q=75"
-                alt="Baupartner"
-                width={770}
-                height={483}
-                className="rounded-lg min-h-[480px] h-full"
-              />
+        <div className="py-8">
+          <div className="my-container grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1  gap-8 ">
+            <div className="img-sm relative transition-all duration-700 ease-out transform animate-on-scroll overflow-hidden opacity-100 translate-y-0">
+              <div className="card-section min-h-[480px] rounded-lg">
+                <img
+                  src="https://bau24dev.de/info/_next/image/?url=%2Finfo%2F_next%2Fstatic%2Fmedia/cardbg-img.3e1a6dec.png&w=1920&q=75"
+                  alt="Baupartner"
+                  width={770}
+                  height={483}
+                  className="h-full w-full object-cover rounded-lg"
+                />
+              </div>
 
               <div className="absolute top-0 left-0 w-full h-full bg-black/50 sm:hidden z-10 rounded-lg"></div>
 
-              <div className="absolute top-0 w-full h-full z-20 rounded-lg">
-                <div className="lg:p-16 sm:p-5 p-4 py-0 flex flex-col lg:gap-8 md:gap-8 gap-4 mt-8 rounded-lg">
+              <div className="absolute top-0 w-full h-full z-10 rounded-lg">
+                <div className="lg:p-16 sm:p-4 p-4 py-0 flex flex-col lg:gap-8 md:gap-8 gap-4 mt-8 rounded-lg">
                   <h6 className="sm:text-3xl text-xl text-white font-semibold">
                     Your direct route to the right one
                     <br className="sm:block hidden" /> Baupartner
@@ -279,46 +278,40 @@ export default function BauInfo() {
                       clicks.
                     </li>
                   </ul>
-                  <button className="usebaubutton rounded-full px-5 py-2 font-medium flex items-center gap-2 w-fit transition">
-                    Use Bau24 Info now
-                    <svg
-                      className="size-5"
-                      width="34"
-                      height="20"
-                      viewBox="0 0 34 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0 10.5H31.5M31.5 10.5L23 2M31.5 10.5L23 18"
-                        stroke="#4F105C"
-                        strokeWidth="3"
+                  <div>
+                    <button className="usebaubutton rounded-full text-[14px] px-4 py-2 font-medium flex items-center justify-center gap-2 w-fit transition">
+                      Use Bau24 Info now
+                      <img
+                        src="/svg/arrowright.svg"
+                        className="size-5 "
+                        width={34}
+                        height={20}
                       />
-                    </svg>
-                  </button>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="right-part-photo-section relative rounded-lg overflow-hidden transition-all duration-700 ease-out transform animate-on-scroll opacity-100 translate-y-0">
+            <div className="img-sm relative bg-rich-purple rounded-lg overflow-hidden transition-all duration-700 ease-out transform animate-on-scroll opacity-100 translate-y-0">
               <div className="absolute top-0 left-0 w-full h-full bg-black/50 sm:hidden z-10 rounded-lg"></div>
 
-              <div className="absolute right-0 top-1/2 -translate-y-1/2 z-20">
-                <Image
+              <div className="absolute right-0 top-1/2 -translate-y-1/2">
+                <img
                   src="https://bau24dev.de/info/_next/image/?url=%2Finfo%2F_next%2Fstatic%2Fmedia/Mask-group.4c94e065.png&w=640&q=75"
                   alt="Construction"
                   width={268}
                   height={364}
-                  className="max-h-[400px] object-contain opacity-50 "
+                  className="max-h-[400px] object-contain"
                 />
               </div>
 
-              <div className="relative z-30 p-8 lg:p-16 text-white">
-                <h6 className="sm:text-3xl text-xl font-semibold">
+              <div className="relative z-10 p-8 lg:p-16">
+                <h6 className="sm:text-3xl text-xl text-white font-semibold">
                   Discover everything for your construction project <br /> - a
                   one place
                 </h6>
-                <ul className="font-medium sm:text-xl text-lg list-disc ps-5 ms-2 mt-6">
+                <ul className="font-medium sm:text-xl text-lg list-disc ps-5 ms-2 text-white mt-6">
                   <li>
                     From property search to interior design - <br />
                     you will find everything you need to build and <br />
@@ -333,90 +326,81 @@ export default function BauInfo() {
                     Entries themselves - so they always stay up to date.
                   </li>
                 </ul>
-                <button className="usebaubutton mt-8 rounded-full px-5 py-2 font-medium flex items-center gap-2 w-fit transition">
-                  Use Bau24 Info now
-                  <svg
-                    className="size-5"
-                    width="34"
-                    height="20"
-                    viewBox="0 0 34 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 10.5H31.5M31.5 10.5L23 2M31.5 10.5L23 18"
-                      stroke="#4F105C"
-                      strokeWidth="3"
+                <div className="mt-8">
+                  <button className="usebaubutton mt-8 rounded-full text-[14px] px-5 py-2 font-medium flex items-center gap-2 w-fit transition">
+                    Use Bau24 Info now
+                    <img
+                      src="/svg/arrowright.svg"
+                      className="size-5"
+                      width={34}
+                      height={20}
                     />
-                  </svg>
-                </button>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         {/* trusted by professionals section 4th section */}
-        <div className="professionals-section bg-[#E9E2EB] py-16 relative overflow-hidden">
-          <div className="max-w-6xl mx-auto text-center px-6">
-            <h1 className="text-center text-[#3C1361] font-bold text-3xl sm:text-[36px] transition-all duration-700 ease-out transform animate-on-scroll opacity-100 translate-y-0">
+        <div className="banner-section3-wrapper bg-[#E9E2EB] py-16 relative overflow-hidden">
+          <div>
+            <h1 className="text-center text-[rgb(79,16,92)] font-bold text-[30px] sm:text-[36px] leading-snug animate-on-scroll">
               Trusted by over 10,000 professionals <br /> the construction
               industry
             </h1>
-            <div className="py-10">
-              <div className="max-w-6xl mx-auto grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 sm:gap-10">
+
+            <div className="bg-[#E9E2EB] py-10 px-4">
+              <div className="max-w-6xl mx-auto grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-6 sm:gap-4 transition-all duration-700 animate-on-scroll">
                 {topBrands.map((brand, i) => (
                   <Link
                     key={i}
                     href={brand.href}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white rounded-lg flex items-center justify-center p-4 hover:shadow-lg transition-all"
+                    className="bg-white rounded-lg p-4 flex items-center justify-center h-[140px] sm:h-[150px] md:h-[160px] brand-box"
                   >
-                    <Image
+                    <img
                       src={brand.src}
                       alt={brand.alt}
-                      width={brand.width}
-                      height={brand.height}
-                      className="object-contain"
+                      className="object-contain max-h-full max-w-full"
                     />
                   </Link>
                 ))}
               </div>
 
-              <div className="max-w-4xl mx-auto grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 mt-16">
+              <div className="max-w-4xl mx-auto grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6 mt-16 transition-all duration-700 animate-on-scroll">
                 {bottomBrands.map((brand, i) => (
                   <Link
                     key={i}
                     href={brand.href}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white rounded-lg flex items-center justify-center p-4 hover:shadow-lg transition-all"
+                    className="bg-white rounded-lg p-4 flex items-center justify-center h-[140px] sm:h-[150px] md:h-[160px] brand-box"
                   >
-                    <Image
+                    <img
                       src={brand.src}
                       alt={brand.alt}
-                      width={brand.width}
-                      height={brand.height}
-                      className="object-contain"
+                      className="object-contain max-h-full max-w-full"
                     />
                   </Link>
                 ))}
               </div>
             </div>
-            <div className="right absolute right-0 top-0 lg:block hidden">
+
+            <div className="absolute right-0 top-0 hidden lg:block">
               <img
                 src="/svg/design1.svg"
-                alt="Baudesign"
-                width={236}
-                height={201}
+                alt="bg-design"
+                width="236"
+                height="201"
               />
             </div>
-            <div className="left absolute left-0 bottom-0 md:block hidden">
+
+            <div className="absolute left-0 bottom-0 hidden md:block">
               <img
                 src="/svg/design.svg"
-                alt="Baudesign1"
-                width={218}
-                height={352}
+                alt="bg-design-2"
+                width="218"
+                height="352"
               />
             </div>
           </div>
