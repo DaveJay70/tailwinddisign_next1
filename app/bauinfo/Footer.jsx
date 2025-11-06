@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="bg-deep-violet pt-16 text-white">
+    <footer className="bg-deep-violet pt-16 ">
       <div className="my-container">
         <h1 className="text-white sm:text-[40px] text-2xl text-center font-bold">
           We look forward to hearing from you <br className="hidden sm:block" />
@@ -17,11 +17,11 @@ export default function Footer() {
               name="email"
               required
               placeholder="Enter Email"
-              className="w-[550px] h-9 pl-11 rounded-full bg-white text-[rgb(0.145,0,0)] outline-none focus:ring-4 focus:ring-[#9D55AE]/50 transition-all duration-300"
+              className="w-[550px] h-10.5 pl-10 rounded-full bg-white text-[rgb(0.145,0,0)] outline-none focus:ring-4 focus:ring-[#9D55AE]/50 transition-all duration-300"
             />
             <button
               type="submit"
-              className="subscribebutton flex items-center justify-center h-[42px] px-6 rounded-full  font-medium text-[14px]  duration-300"
+              className="subscribebutton cursor-pointer flex items-center justify-center h-[42px] px-5 rounded-full  font-medium text-[14px]  duration-300"
             >
               Subscribe
             </button>
@@ -34,7 +34,9 @@ export default function Footer() {
           <h5 className="text-white text-xl font-bold text-center underline underline-offset-8">
             ABOUT BAU24 INFO
           </h5>
-          <p className="text-white opacity-75 pt-3 mx-auto max-w-7xl text-xl text-center font-light capitalize">
+          <p style={{
+            fontWeight: '200!important',
+          }} className="text-white opacity-75 pt-3 mx-auto max-w-7xl text-xl text-center capitalize">
             Bau24 Info is a comprehensive database of contacts and products
             related to construction. From land and property searches to
             construction, interior design, manufacturers, home economics, and
@@ -103,38 +105,37 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 my-8"></div>
+        <div className="border border-set my-8 opacity-50"></div>
 
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-10">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 ">
           <div>
-            <h6 className="uppercase text-xl font-normal">Category</h6>
-            <ul className="font-light opacity-75 text-lg">
+            <h6 className="text-white uppercase text-xl font-normal">
+              Category
+            </h6>
+            <ul className="text-white font-light opacity-75 text-lg ">
               <li className="pt-5 pb-2">
                 <a href="#">Manufacturer</a>
               </li>
               <li className="pb-2">
                 <a href="#">Specialist retailers</a>
               </li>
-              <li className="pb-2">
-                <a href="#">Handwerk</a>
-              </li>
+
               <li className="pb-2">
                 <a href="#">Crafts</a>
               </li>
+              <li className="sm:py-2"></li>
             </ul>
           </div>
 
           <div>
-            <ul className="font-light opacity-75 text-lg mt-5">
-              <li className="pt-5 pb-2">
+            <ul className=" text-white font-light opacity-75 text-lg sm:mt-5 mt-0">
+              <li className="sm:pt-5 pb-2">
                 <a href="#">Architects</a>
               </li>
               <li className="pb-2">
                 <a href="#">Construction Lawyers</a>
               </li>
-              <li className="pb-2">
-                <a href="#">Prefabricated Houses</a>
-              </li>
+
               <li className="pb-2">
                 <a href="#">Trade Fairs</a>
               </li>
@@ -142,8 +143,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h6 className="uppercase text-xl font-normal">Legal</h6>
-            <ul className="font-light opacity-75 text-lg">
+            <h6 className="uppercase text-xl font-normal text-white">Legal</h6>
+            <ul className="text-white font-light opacity-75 text-lg">
               <li className="pt-5 pb-2">
                 <a href="#">Privacy Policy</a>
               </li>
@@ -160,8 +161,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h6 className="uppercase text-xl font-normal">Talk To Us</h6>
-            <ul className="font-light opacity-75 text-lg">
+            <h6 className="uppercase text-xl text-white font-normal">
+              Talk To Us
+            </h6>
+            <ul className="text-white font-light opacity-75 text-lg">
               <li className="pt-5 pb-2">
                 <a href="mailto:support@bau24.de">support@bau24.de</a>
               </li>
@@ -172,8 +175,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 my-8"></div>
-
+        <div className="border border-set my-4 opacity-50"></div>
         <div className="flex items-center justify-between flex-wrap gap-4 pb-5">
           <div>
             <a href="/">
@@ -195,7 +197,7 @@ export default function Footer() {
           <div className="flex items-center flex-wrap gap-4">
             <div className="cursor-pointer">
               <a href="">
-               <img
+                <img
                   src="/svg/facebook.svg"
                   alt="facebook Icon"
                   width={40}
@@ -215,7 +217,7 @@ export default function Footer() {
             </div>
             <div className="cursor-pointer">
               <a href="">
-               <img
+                <img
                   src="/svg/twitter.svg"
                   alt="twitter Icon"
                   width={40}

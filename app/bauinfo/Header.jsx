@@ -25,35 +25,35 @@ export default function Header() {
 
   const navLinks = [
     "Manufacturer",
-    "Specialist Retailers",
+    "Specialist retailers",
     "Crafts",
-    "Clubs",
     "Architects",
     "Construction Lawyers",
-    "Prefabricated Houses",
     "Trade Fairs",
   ];
 
   return (
     <>
       <div className="sticky top-0 z-99">
-        <div className="relative w-full z-2 bg-white">
-          <div className="my-container mx-auto flex items-center justify-between py-2  ">
-            <Link href="https://bau24dev.de/">
-              <Image
-                src="/logo.png"
-                alt="Main Logo"
-                width={240}
-                height={52}
-                className="h-8 w-auto "
-              />
-            </Link>
-            <nav className="hidden md:flex flex-wrap gap-1 text-[6px] sm:text-[8px] md:text-[8px] lg:text-[10px] xl:text-[12px] 2xl:text-[16px] leading-normal">
+        <div className="bg-white py-3 shadow-[0px_2px_7px_1px_#66666640] relative z-2">
+          <div className="my-container flex items-center justify-between   ">
+            <div>
+              <Link href="https://bau24dev.de/">
+                <Image
+                  src="/logo.png"
+                  alt="Main Logo"
+                  width={240}
+                  height={52}
+                  className="h-8 w-auto "
+                />
+              </Link>
+            </div>
+            <div className="hidden md:flex flex-wrap gap-1 ">
               {mainNav.map((item, idx) => (
                 <Link
                   key={idx}
                   href={item.link}
-                  className="flex gap-x-2 px-2 header-1 py-4 text-[rgb(3,9,20)] "
+                  className="rounded-md px-4 py-4 flex items-baseline gap-x-2 header-1 text-[rgb(3,9,20)] "
                 >
                   <Image
                     src={item.icon}
@@ -61,27 +61,25 @@ export default function Header() {
                     width={16}
                     height={16}
                   />
-                  <span className="font-normal">
-                    {item.name}
-                  </span>
+                  <span className="nav-link">{item.name}</span>
                 </Link>
               ))}
-            </nav>
+            </div>
 
             <div className="flex gap-2">
               <button
-                className="flex items-center gap-1 border border-[#919EAB] rounded-full p-1 py-[3px] hover:bg-gray-50 transition"
+                className="flex items-center gap-1 border border-[#919EAB] rounded-full p-1  py-[4px] pr-1 hover:bg-gray-50 transition"
                 type="button"
               >
                 <Image
                   src="/usa.png"
                   alt="English"
-                  width={23}
-                  height={23}
+                  width={24}
+                  height={24}
                   className="rounded-full"
                 />
-                <span className="text-sm font-medium text-black">EN</span>
-                <ChevronDown size={14} className="text-black" />
+                <span className=" font-medium text-black">EN</span>
+                <ChevronDown size={16} className="text-[#919EAB]" />
               </button>
 
               <button
@@ -95,9 +93,9 @@ export default function Header() {
         </div>
 
         {/* Second Header */}
-        <div className="secondheader relative w-full z-1 hidden md:block ">
-          <div className="my-container flex flex-wrap items-center justify-between gap-5 py-3">
-            <Link href="/bauinfo/de" className="flex-shrink-0">
+        <div className="secondheader border-b  border-transparent relative z-1">
+          <div className="my-container md:flex flex-wrap items-center justify-between gap-6 hidden">
+            <Link href="/bauinfo/de" className=" py-3">
               <Image
                 src="https://bau24dev.de/info/_next/image/?url=%2Finfo%2F_next%2Fstatic%2Fmedia%2Fbau-info.3b819feb.png&w=256&q=75"
                 alt="BauInfo Logo"
@@ -106,16 +104,18 @@ export default function Header() {
               />
             </Link>
 
-            <div className="flex flex-wrap items-center justify-center">
-              {navLinks.map((item) => (
-                <Link
-                  key={item}
-                  href="#"
-                  className="px-3 py-6  text-[rgb(3,9,20)]  transition-colors text-[12px] sm:text-[6px] md:text-[6px] lg:text-[8px] xl:text-[12px] 2xl:text-[14px] leading-normal"
-                >
-                  {item}
-                </Link>
-              ))}
+            <div className="flex flex-wrap items-center ">
+              <div className="flex">
+                {navLinks.map((item) => (
+                  <Link
+                    key={item}
+                    href="#"
+                    className="nav-link-2 px-4 py-6  flex items-center gap-x-2 me-0 border-b-4 border-transparent text-[rgb(3,9,20)]  transition-colors "
+                  >
+                    {item}
+                  </Link>
+                ))}
+              </div>
             </div>
 
             <Link
@@ -129,40 +129,43 @@ export default function Header() {
       </div>
 
       <div
-        className={`fixed top-0 right-0 h-full w-[75%] bg-white z-[999] transform transition-transform duration-500 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-[80%] bg-white z-[999] transform transition-transform duration-500 ease-in-out ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } overflow-y-auto`}
       >
-        <div className="flex justify-end p-4">
-          <button onClick={() => setIsMenuOpen(false)}>
-            <X size={26} />
-          </button>
+        <div className="sticky top-0 bg-white z-10 border-b border-gray-200">
+          <div className="flex justify-between items-center p-4">
+            <Image
+              src="/logo.png"
+              alt="Main Logo"
+              width={150}
+              height={50}
+              className="h-8 w-auto"
+            />
+
+            <button onClick={() => setIsMenuOpen(false)}>
+              <X size={26} className="text-gray-400" />
+            </button>
+          </div>
         </div>
 
-        <div className="flex flex-col items-start text-left px-8 pb-10 space-y-4">
-          <Image
-            src="/logo.png"
-            alt="Main Logo"
-            width={150}
-            height={50}
-            className="mb-2"
-          />
-          <div className="w-full h-[1px] bg-gray-300"></div>
+        <div className="flex flex-col items-start text-left px-5  space-y-3 py-2">
+          <div className="border-b"></div>
           <Link
             href="#"
-            className="registerbutton font-medium px-6 py-2 rounded-full mt-2 bg-blue-600 text-white"
+            className="registerbutton font-medium px-4  rounded-full "
           >
             Registration
           </Link>
           <div className="w-full h-[1px] bg-gray-300"></div>
-          <button className="bauinfo rounded-lg">BAUINFO</button>
+          <button className="bauinfo rounded-lg font-medium px-2">BAUINFO</button>
 
-          <div className="flex flex-col space-y-3 mt-4 w-full">
+          <div className="flex flex-col space-y-4 mt-4 w-full">
             {mainNav.slice(1).map((item) => (
               <Link
                 key={item.name}
                 href={item.link}
-                className="flex items-center gap-3 text-gray-800 text-base font-medium"
+                className="flex items-center gap-3 text-black text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
@@ -177,7 +180,7 @@ export default function Header() {
               <Link
                 key={item}
                 href="#"
-                className="text-gray-600 text-sm hover:text-blue-600"
+                className="text-gray-600 text-sm "
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item}

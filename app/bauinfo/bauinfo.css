@@ -3,31 +3,41 @@
     --gardiantDarkViolet: linear-gradient(90deg, #4A0959 0%, #9D55AE 100%);
     --light-lavender: #e9e2eb;
     --bs-gutter-x: .10rem;
-    --font-18: 18px;
     --font-white: #fff;
+    --font-18: 18px;
     --rich-purple: #6e3a7a;
     --deep-violet: #4f105c;
+    --card: oklch(100% 0 0);
+    --rich-purple: #6e3a7a;
+
+    --tw-border-style {
+        syntax: "*";
+        inherits: false;
+        initial-value: initial;
+    }
+}
+
+.border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
 }
 
 .secondheader {
     background-color: var(--light-lavender);
 }
 
-main {
-    padding-top: 140px;
-}
+
 
 .halfcircle-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 330px;
+    height: 380px;
     background-color: var(--light-lavender);
     border-bottom-left-radius: 40%;
     border-bottom-right-radius: 40%;
     z-index: -1;
-    /* behind all headers and content */
 }
 
 .card-img {
@@ -43,8 +53,6 @@ main {
     background: var(--gardiantDarkViolet);
     color: white;
     border: 1px solid;
-    padding: 3px;
-
 
 }
 
@@ -66,7 +74,15 @@ main {
     background-image: var(--gardiantDarkViolet);
 }
 
-.seekbutton,
+.seekbutton {
+    background: var(--gardiantDarkViolet);
+    color: white;
+    border: 1px solid;
+    transition: all 0.3s ease;
+
+
+}
+
 .learnmorebutton {
     background: var(--gardiantDarkViolet);
     color: white;
@@ -96,7 +112,6 @@ main {
     color: var(--DarkViolet);
     border: 1px solid;
     transition: all 0.3s ease;
-    padding: 0.5rem 1rem;
     size: 14px;
 }
 
@@ -121,8 +136,8 @@ main {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
 }
 
 @media (min-width: 576px) {
@@ -155,7 +170,51 @@ main {
     }
 }
 
+
+
 /*Main nav padding*/
+@media (max-width: 800px) {
+    .header-1 {
+        align-items: center;
+        padding: 8px 5px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .header-1 {
+        align-items: center;
+        padding: 10px 6px !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header-1 {
+        align-items: center;
+        padding: 10px 6px !important;
+    }
+}
+
+@media (max-width: 1100px) {
+    .header-1 {
+        align-items: center;
+        padding: 10px 6px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .header-1 {
+        align-items: center;
+        padding: 12px 10px !important;
+    }
+}
+
+@media (max-width: 1300px) {
+    .header-1 {
+        align-items: center;
+        padding: 15px 10px !important;
+    }
+}
+
 @media (max-width: 1400px) {
     .header-1 {
         align-items: center;
@@ -192,6 +251,9 @@ main {
 }
 
 /*main and sec nav text size*/
+.active {
+    background-image: var(--gardiantDarkViolet);
+}
 
 .active .nav-link,
 .nav-link,
@@ -200,8 +262,52 @@ main {
     line-height: normal;
 }
 
-.active .nav-link {
-    color: var(--font-white);
+@media (max-width: 900px) {
+
+    .nav-link,
+    .nav-link-2 {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .nav-link,
+    .nav-link-2 {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    .nav-link,
+    .nav-link-2 {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .nav-link,
+    .nav-link-2 {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 1300px) {
+
+    .nav-link,
+    .nav-link-2 {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 1400px) {
+
+    .nav-link,
+    .nav-link-2 {
+        font-size: 12px !important;
+    }
 }
 
 @media (max-width: 1500px) {
@@ -216,25 +322,11 @@ main {
 
     .nav-link,
     .nav-link-2 {
-        font-size: 14px !important;
+        font-size: 14px;
     }
 }
 
-@media (max-width: 1700px) {
 
-    .nav-link,
-    .nav-link-2 {
-        font-size: 16px !important;
-    }
-}
-
-@media (max-width: 1800px) {
-
-    .nav-link,
-    .nav-link-2 {
-        font-size: 18px !important;
-    }
-}
 
 .nav-link,
 .nav-link-2 {
@@ -253,10 +345,24 @@ main {
     height: 100%;
     overflow: hidden;
 }
+
 .brand-box {
     width: 100%;
     height: 116px;
+    transition: all 0.3s ease-in-out;
 }
+
+.brand-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.brand-box img {
+    display: block;
+    margin: 0 auto;
+}
+
+
 .brand-section {
     width: 100%;
     height: auto;
@@ -273,4 +379,23 @@ main {
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+.bg-card {
+    background-color: var(--card);
+}
+
+.footerp {
+    font-weight: 300;
+}
+
+.halfcircle-bg-img {
+    background-image: url(https://bau24dev.de/info/_next/static/media/bg-img.e90f5d76.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: -2px;
+}
+
+.bg-rich-purple {
+    background-color: var(--rich-purple);
 }

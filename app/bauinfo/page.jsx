@@ -30,13 +30,11 @@ export default function BauInfo() {
 
   const topCategories = [
     { title: "Manufacturer", img: "manufacturer.6867c2bc.png" },
-    { title: "Specialist Retailers", img: "specialist-trade.c0dddf97.png" },
+    { title: "Specialist retailers", img: "specialist-trade.c0dddf97.png" },
     { title: "Crafts", img: "trade.5bf4d5e0.png" },
-    { title: "Clubs", img: "associations.5d75f0b9.png" },
     { title: "Construction Lawyers", img: "specialist-lawyer.4282e886.png" },
     { title: "Architects", img: "architects.05ae6f18.png" },
-    { title: "Prefabricated Houses", img: "prefab-house.e723422e.png" },
-    { title: "Measure", img: "exhibitions.82f1dde6.png" },
+    { title: "Trade Fairs", img: "exhibitions.82f1dde6.png" },
   ];
 
   const topBrands = [
@@ -44,36 +42,26 @@ export default function BauInfo() {
       href: "https://bau24dev.de/info/de/company/aco-gruppe-2019-1/",
       src: "https://bau24dev.de/info/_next/static/media/aco.d400bbbb.png",
       alt: "ACO",
-      width: 200,
-      height: 153,
     },
     {
       href: "https://bau24dev.de/info/de/company/artemide-7/",
       src: "https://bau24dev.de/info/_next/static/media/artemide.fe65ab93.png",
       alt: "Artemide",
-      width: 216,
-      height: 80,
     },
     {
       href: "https://bau24dev.de/info/de/company/dorow-sohn-kg-niederlassung-engelsdorf-683/",
       src: "https://bau24dev.de/info/_next/static/media/lotter.ee8d380b.png",
       alt: "Lotter",
-      width: 128,
-      height: 49,
     },
     {
       href: "https://bau24dev.de/info/de/company/boffi-18/",
       src: "https://bau24dev.de/info/_next/static/media/boffi.0f15e4b1.png",
       alt: "Boffi",
-      width: 216,
-      height: 80,
     },
     {
       href: "https://bau24dev.de/info/de/company/bover-19/",
       src: "https://bau24dev.de/info/_next/static/media/bover.a541c3f1.png",
       alt: "Bover",
-      width: 197,
-      height: 172,
     },
   ];
 
@@ -82,29 +70,21 @@ export default function BauInfo() {
       href: "https://bau24dev.de/info/de/company/alape-3/",
       src: "https://bau24dev.de/info/_next/static/media/alape.f0a2e05c.png",
       alt: "Alape",
-      width: 200,
-      height: 105,
     },
     {
       href: "https://bau24dev.de/info/de/company/bucher-gc-gruppe-747/",
       src: "https://bau24dev.de/info/_next/static/media/bucher.654936b0.png",
       alt: "Bucher",
-      width: 128,
-      height: 78,
     },
     {
       href: "https://bau24dev.de/info/de/company/elmer-gmbh-co-kg-boenen-859/",
       src: "https://bau24dev.de/info/_next/static/media/elmer.3d1485a6.png",
       alt: "Elmer",
-      width: 128,
-      height: 33,
     },
     {
       href: "https://bau24dev.de/info/de/company/eisen-knorr-ag-886/",
       src: "https://bau24dev.de/info/_next/static/media/knoor.35a6cc89.png",
       alt: "Knoor",
-      width: 128,
-      height: 55,
     },
   ];
 
@@ -116,19 +96,19 @@ export default function BauInfo() {
 
       {/* Main Content */}
 
-      <div className="flex-grow:1;min-height:100vh">
-        <div className="relative mx-auto text-center px-6">
-          <h1 className="font-bold Immediatetext mb-2 mt-13 leading-[60px] text-[40px]">
+      <main className="flex-grow:1;min-height:100vh">
+        <div className="relative">
+          <h1 className="sm:text-[40px] text-[30px] text-center Immediatetext font-bold pt-15.5 transition-all duration-700 ease-out transform animate-on-scroll opacity-100 translate-y-0">
             Instant Access to Build Experts
           </h1>
-          <p className="text-[rgb(64,57,57)] font-18 font-Inder  text-center font-medium transition-all duration-700 ease-out transform animate-on-scroll mt-3 opacity-100 translate-y-0">
+          <p className="font-18  text-[rgb(64,57,57)] text-center font-medium transition-all duration-700 ease-out transform animate-on-scroll mt-3 opacity-100 translate-y-0">
             Find products, services & experts in one place.
           </p>
 
           {/* Search Bar */}
           <div className="flex items-center justify-center px-4 pt-5">
             <div className="flex flex-col sm:flex-row max-w-3xl bg-white border border-gray-200 sm:rounded-full rounded-sm overflow-hidden w-full">
-              <div className="flex items-center gap-2 px-4 py-3 w-full sm:w-[450px]">
+              <div className="flex items-center gap-2 px-3.5 py-3 w-full sm:w-[450px]">
                 <img
                   src="/svg/search.svg"
                   alt="Search Icon"
@@ -138,7 +118,7 @@ export default function BauInfo() {
                 <input
                   type="text"
                   placeholder="Search Here"
-                  className="w-full sm:text-xl text-sm  placeholder-gray-400 outline-none"
+                  className="w-full sm:text-xl text-base  placeholder-gray-400 outline-none"
                 />
               </div>
               <div className="hidden sm:block h-6 border-l border-gray-300 my-auto"></div>
@@ -155,36 +135,38 @@ export default function BauInfo() {
                   />
                 </svg>
               </div>
-              <button className="seekbutton  font-medium text-base m-1 transition w-auto rounded-full">
+              <button className="seekbutton cursor-pointer flex font-medium text-base items-center my-1  mr-1.5 px-4 transition w-auto rounded-full">
                 Search
               </button>
             </div>
           </div>
 
           {/* feature cards 1st section*/}
-          <div className="my-container mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 gap-4 ">
+          <div className="my-container mt-16 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
             {featureCards.map((card, i) => (
               <div
                 key={i}
-                className="bg-white flex flex-col items-center text-center
-                 rounded-xl shadow-sm border border-[#0000004D]
-                 hover:shadow-lg transition-transform transform hover:-translate-y-1
-                 py-6 px-4 gap-3"
+                className="transition-all duration-700 ease-out transform animate-on-scroll opacity-100 translate-y-0"
               >
-                <div className="flex justify-center card-img">
-                  <img
-                    src={card.img}
-                    alt={card.title}
-                  />
+                <div className="bg-card text-card-foreground flex flex-col gap-6 rounded-xl py-6 shadow-sm w-full h-full border border-[#0000004D]">
+                  <div className=" grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6">
+                    <div className="flex justify-center card-img">
+                      <img
+                        src={card.img}
+                        alt={card.title}
+                        className="max-w-[120px] h-auto"
+                      />
+                    </div>
+
+                    <div className="text-center py-3 text-2xl font-semibold text-[rgb(3,9,20)] ;">
+                      {card.title}
+                    </div>
+
+                    <div className="text-center text-xl text-[rgb(64,57,57)]">
+                      {card.desc}
+                    </div>
+                  </div>
                 </div>
-
-                <h3 className="text-[24px] leading-[32px] font-semibold text-black mb-2">
-                  {card.title}
-                </h3>
-
-                <p className="ml-1 text-[20px] leading-[28px] text-[rgb(64,57,57)] text-center">
-                  {card.desc}
-                </p>
               </div>
             ))}
           </div>
@@ -202,37 +184,37 @@ export default function BauInfo() {
         </div>
 
         {/* top categories Section 2nd section  */}
-        <div className="imagesection py-8 ">
-          <div className="my-container  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2  xl:grid-cols-4 gap-8">
+        <div className="imagesection py-8 xl:px-52">
+          <div className="my-container  grid grid-cols-1  md:grid-cols-2  xl:grid-cols-3 gap-8">
             {topCategories.map((cat, i) => (
               <div
                 key={i}
-                className="transition-all duration-500 ease-out transform hover:-translate-y-1"
+                className="transition-all duration-700 ease-out transform hover:-translate-y-1"
               >
-                <div className="bg-white flex flex-col rounded-2xl py-6 shadow-sm w-full h-full border border-[#0000004D]">
-                  <div className="flex justify-center px-6">
+                <div className="bg-white flex flex-col rounded-2xl py-5 shadow-sm w-full h-full border border-[#0000004D]">
+                  <div className="flex justify-center px-6 mt-1">
                     <Image
                       src={`https://bau24dev.de/info/_next/image/?url=%2Finfo%2F_next%2Fstatic%2Fmedia%2F${cat.img}&w=384&q=75`}
                       alt={cat.title}
                       width={375}
                       height={250}
-                      className="rounded-lg"
+                      className="rounded-lg w-full "
                     />
                   </div>
 
-                  <div className="px-6 mt-4 ">
+                  <div className="px-6 mt-2.5 ">
                     <div>
-                      <h3 className="text-xl font-semibold text-[rgb(3,9,20)] mb-2">
+                      <h3 className="text-xl font-semibold text-[rgb(3,9,20)] mb-2.5">
                         {cat.title}
                       </h3>
-                      <p className="text-[rgb(64,57,57)] text-base font-medium mb-5">
+                      <p className="text-[rgb(64,57,57)] text-base font-medium mb-4">
                         Here you will find all well-known producers
                       </p>
                     </div>
 
                     <div className="items-end  justify-end">
-                      <button className="learnmorebutton text-white text-base font-medium rounded-full mt-auto">
-                        Learn more
+                      <button className="learnmorebutton cursor-pointer text-white text-base font-medium rounded-full mt-auto mb-1">
+                        Learn More
                       </button>
                     </div>
                   </div>
@@ -259,8 +241,8 @@ export default function BauInfo() {
               <div className="absolute top-0 left-0 w-full h-full bg-black/50 sm:hidden z-10 rounded-lg"></div>
 
               <div className="absolute top-0 w-full h-full z-10 rounded-lg">
-                <div className="lg:p-16 sm:p-4 p-4 py-0 flex flex-col lg:gap-8 md:gap-8 gap-4 mt-8 rounded-lg">
-                  <h6 className="sm:text-3xl text-xl text-white font-semibold">
+                <div className="lg:p-16 sm:p-4 p-4 py-0  flex flex-col lg:gap-8 md:gap-8 gap-4 mt-8 rounded-lg">
+                  <h6 className="sm:text-3xl text-xl text-white font-semibold ">
                     Your direct route to the right one
                     <br className="sm:block hidden" /> Baupartner
                   </h6>
@@ -279,7 +261,7 @@ export default function BauInfo() {
                     </li>
                   </ul>
                   <div>
-                    <button className="usebaubutton rounded-full text-[14px] px-4 py-2 font-medium flex items-center justify-center gap-2 w-fit transition">
+                    <button className="usebaubutton cursor-pointer rounded-full text-[14px] px-4 py-2.5 font-medium flex items-center justify-center gap-2 w-fit transition">
                       Use Bau24 Info now
                       <img
                         src="/svg/arrowright.svg"
@@ -327,7 +309,7 @@ export default function BauInfo() {
                   </li>
                 </ul>
                 <div className="mt-8">
-                  <button className="usebaubutton mt-8 rounded-full text-[14px] px-5 py-2 font-medium flex items-center gap-2 w-fit transition">
+                  <button className="usebaubutton cursor-pointer mt-8 rounded-full text-[14px] px-4 py-2.5 font-medium flex items-center gap-2 w-fit transition">
                     Use Bau24 Info now
                     <img
                       src="/svg/arrowright.svg"
@@ -343,50 +325,56 @@ export default function BauInfo() {
         </div>
 
         {/* trusted by professionals section 4th section */}
-        <div className="banner-section3-wrapper bg-[#E9E2EB] py-16 relative overflow-hidden">
+        <div className="bg-[#E9E2EB] py-16 relative">
           <div>
-            <h1 className="text-center text-[rgb(79,16,92)] font-bold text-[30px] sm:text-[36px] leading-snug animate-on-scroll">
+            <h1 className="text-[rgb(79,16,92)] text-center font-bold text-[30px] sm:text-[36px] transition-all duration-700 ease-out transform animate-on-scroll opacity-100 translate-y-0">
               Trusted by over 10,000 professionals <br /> the construction
               industry
             </h1>
 
-            <div className="bg-[#E9E2EB] py-10 px-4">
-              <div className="max-w-6xl mx-auto grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-6 sm:gap-4 transition-all duration-700 animate-on-scroll">
-                {topBrands.map((brand, i) => (
-                  <Link
-                    key={i}
-                    href={brand.href}
-                    target="_blank"
-                    className="bg-white rounded-lg p-4 flex items-center justify-center h-[140px] sm:h-[150px] md:h-[160px] brand-box"
-                  >
-                    <img
-                      src={brand.src}
-                      alt={brand.alt}
-                      className="object-contain max-h-full max-w-full"
-                    />
-                  </Link>
-                ))}
+            <div className="py-10 px-4 relative z-30 ">
+              <div className="max-w-6xl mx-auto grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 lg:gap-6 md:gap-4 sm:gap-2 gap-4 transition-all duration-700 ease-out transform animate-on-scroll opacity-100 translate-y-0">
+                {topBrands.map((brand, i) => {
+                  let paddingClass = "p-4"; 
+                  if (i === 0) paddingClass = "p-[22px]"; 
+                  else if (i === 4) paddingClass = "p-0"; 
+
+                  return (
+                    <Link
+                      key={i}
+                      href={brand.href}
+                      target="_blank"
+                      className={`bg-white rounded-lg ${paddingClass} justify-center flex items-center brand-box`}
+                    >
+                      <img
+                        src={brand.src}
+                        alt={brand.alt}
+                        className="object-contain max-w-full h-full"
+                      />
+                    </Link>
+                  );
+                })}
               </div>
 
-              <div className="max-w-4xl mx-auto grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6 mt-16 transition-all duration-700 animate-on-scroll">
+              <div className="max-w-4xl mx-auto grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6 mt-16 transition-all duration-700 ease-out transform animate-on-scroll opacity-100 translate-y-0">
                 {bottomBrands.map((brand, i) => (
                   <Link
                     key={i}
                     href={brand.href}
                     target="_blank"
-                    className="bg-white rounded-lg p-4 flex items-center justify-center h-[140px] sm:h-[150px] md:h-[160px] brand-box"
+                    className="bg-white rounded-lg p-4 flex items-center justify-center  brand-box"
                   >
                     <img
                       src={brand.src}
                       alt={brand.alt}
-                      className="object-contain max-h-full max-w-full"
+                      className=" object-contain w-auto h-full"
                     />
                   </Link>
                 ))}
               </div>
             </div>
 
-            <div className="absolute right-0 top-0 hidden lg:block">
+            <div className="absolute right-0 top-0 hidden lg:block z-10  ">
               <img
                 src="/svg/design1.svg"
                 alt="bg-design"
@@ -395,7 +383,7 @@ export default function BauInfo() {
               />
             </div>
 
-            <div className="absolute left-0 bottom-0 hidden md:block">
+            <div className="absolute left-0 bottom-0 hidden md:block z-10 ">
               <img
                 src="/svg/design.svg"
                 alt="bg-design-2"
@@ -405,7 +393,7 @@ export default function BauInfo() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 }
